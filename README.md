@@ -1,13 +1,22 @@
 # Dortmund is a decentralized exchange which allows users to buy and sell tokens using swap functionality and many more
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+## Technology stack
 
-Try running some of the following tasks:
+- Solidity (Writing Smart Contracts & Tests)
+- Javascript (React & Testing)
+- [Hardhat](https://hardhat.org/) (Development Framework)
+- [Ethers.js](https://docs.ethers.io/v5/) (Blockchain Interaction)
+
+## Testing `DortmundV3Twap.sol`
+
+![Image](https://github.com/turnMeUpSon/dortmund-DEX/blob/main/Screenshot%20from%202023-03-07%2018-56-19.png)
+![Image](https://github.com/turnMeUpSon/dortmund-DEX/blob/main/Screenshot%20from%202023-03-07%2018-56-00.png)
+
+Start the dapp:
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
+npm install --save-dev hardhat
+npm install
 npx hardhat node
-npx hardhat run scripts/deploy.js
+npx hardhat test --network localhost
 ```

@@ -4,7 +4,7 @@ pragma solidity 0.7.6;
 import "@uniswap/v3-core/contracts/interfaces/IUniswapV3Factory.sol";
 import "@uniswap/v3-periphery/contracts/libraries/OracleLibrary.sol";
 
-contract UniswapV3Twap {
+contract DortmundV3Twap {
     address public token0;
     address public token1;
     address public pool;
@@ -14,7 +14,7 @@ contract UniswapV3Twap {
         address _token0,
         address _token1,
         uint24 _fee
-    ) {
+    ) payable {
         assembly {
             sstore(token0.slot, _token0)
             sstore(token1.slot, _token1)
@@ -72,7 +72,7 @@ contract UniswapV3Twap {
         if (
             tickCumulativesDelta < 0 && (tickCumulativesDelta % secondsAgo != 0)
         ) {
-            tick--;
+            tick = tick - 1;
         }
 
         amountOut = OracleLibrary.getQuoteAtTick(
