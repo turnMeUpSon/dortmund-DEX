@@ -3,7 +3,7 @@
 ## Technology stack
 
 - Solidity (Writing Smart Contracts & Tests)
-- Javascript (React & Testing)
+- Javascript (Testing)
 - [Hardhat](https://hardhat.org/) (Development Framework)
 - [Ethers.js](https://docs.ethers.io/v5/) (Blockchain Interaction)
 
